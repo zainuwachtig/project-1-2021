@@ -2,11 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Avenir Black", sans-serif;
+  font-family: "Avenir", sans-serif;
+}
+
+*:focus {
+  outline: 0.2em solid var(--color-oba);
 }
 
 :root {
   --color-oba: #ff0000;
+  --width-book: 15em;
+  --height-book: 16.5em;
+  --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -16,28 +23,94 @@ header {
   margin: 1em;
 }
 
+header h1 span {
+  margin-left: -0.3em;
+}
+
 header h1 span:nth-of-type(3) {
   transform: rotate(-90deg);
   display: inline-block;
+  transition: 0.5s;
+}
+
+header h1 span:nth-of-type(3):hover {
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main input[type="text"] {
+  display: block;
   padding: 1em;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin: 1em;
+  box-shadow: var(--box-shadow);
   border: none;
   border-radius: 0.3em;
 }
 
-main input[type="text"]:focus {
-  outline: 0.2em solid var(--color-oba);
+.results-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
 }
+
+/* Voor- en achterkant van het boek */
+article {
+  transform-style: preserve-3d;
+  width: var(--width-book);
+  height: var(--height-book);
+  transition: 1s;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+article img {
+  margin: 0 auto;
+  display: block;
+  border-radius: 1em;
+  box-shadow: var(--box-shadow);
+}
+
+article div:nth-of-type(2) {
+  transform: rotateY(180deg);
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 1em;
+  padding: 1em;
+  overflow: scroll;
+}
+
+article div:nth-of-type(1),
+article div:nth-of-type(2) {
+  position: absolute;
+  width: var(--width-book);
+  height: var(--height-book);
+  backface-visibility: hidden;
+}
+
+article:hover {
+  transform: perspective(100em) rotateY(180deg);
+  transition: 1s;
+}
+
+/* Werkt nog niet op alle boeken */
+/* .turnbook {
+  transform: perspective(100em) rotateY(180deg);
+  transition: 1s;
+} */
 
 a {
   text-decoration: none;
   color: black;
-  border: 0.1em solid var(--color-oba);
+  /* border: 0.1em solid var(--color-oba);
   padding: 2em 1em 2em 2em;
-  border-radius: 40% 70% 60% 20%;
+  border-radius: 40% 70% 60% 20%; */
 }
 
 footer {
