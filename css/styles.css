@@ -21,6 +21,8 @@ header {
   align-items: flex-end;
   margin: 1em;
   justify-content: space-around;
+  background-image: url(./img/oba_achtergrond.svg);
+  background-size: cover;
 }
 
 header h1 span {

@@ -1,8 +1,8 @@
 function searchQuery(searchValue, e) {
+    e.preventDefault();
     searchValue = document.querySelector('input').value;
     console.log(searchValue)
     routie(`zoeken/${searchValue}`);
-    e.preventDefault();
 }
 
 export { searchQuery }
