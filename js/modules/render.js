@@ -14,7 +14,7 @@ function render(data) {
                     <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
                 </div>
         `;
-        resultsWrapper.insertAdjacentHTML('beforeend', html);
+        resultsWrapper.insertAdjacentHTML('afterbegin', html);
    
     });
 }

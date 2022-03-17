@@ -1,13 +1,7 @@
-// Moet in aparte module en voor ieder boek
-const bookWrap = document.querySelector('main article');
+import { handleRoutes } from './modules/router.js';
+import {searchQuery} from './modules/search.js'
 
-function turnBook() {
-    bookWrap.classList.toggle('turnbook');
-}
+handleRoutes()
 
-bookWrap.addEventListener('click', turnBook);
 
-import { url } from './modules/variables.js'
-import { getData } from './modules/getData.js';
-
-getData(url)
+document.querySelector('form').addEventListener('submit', searchQuery);

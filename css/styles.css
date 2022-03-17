@@ -18,13 +18,18 @@
 
 header {
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
   margin: 1em;
+  justify-content: space-around;
 }
 
 header h1 span {
   margin-left: -0.3em;
+}
+
+header h1 span:nth-of-type(2) {
+  transform: scale(1.2);
+  display: inline-block;
 }
 
 header h1 span:nth-of-type(3) {
@@ -35,7 +40,6 @@ header h1 span:nth-of-type(3) {
 
 header h1 span:nth-of-type(3):hover {
   transform: rotate(0deg);
-  transition: 0.5s;
 }
 
 main {
@@ -45,12 +49,22 @@ main {
 }
 
 main input[type="text"] {
-  display: block;
   padding: 1em;
-  margin: 1em;
+  /* margin: 1em; */
   box-shadow: var(--box-shadow);
   border: none;
-  border-radius: 0.3em;
+  border-radius: 0.3em 0 0 0.3em;
+  width: 15em;
+}
+
+main input[type="submit"] {
+  padding: 1em;
+  background-color: var(--color-oba);
+  color: white;
+  border: none;
+  border-radius: 0 0.3em 0.3em 0;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
 }
 
 .results-wrapper {
@@ -58,6 +72,7 @@ main input[type="text"] {
   align-items: center;
   width: 100vw;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Voor- en achterkant van het boek */
@@ -67,7 +82,7 @@ article {
   height: var(--height-book);
   transition: 1s;
   border-radius: 1em;
-  margin: 1em;
+  margin: 2em 1em;
 }
 
 article img {
