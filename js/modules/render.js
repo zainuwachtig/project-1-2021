@@ -1,6 +1,6 @@
 function render(data) {
     const resultsWrapper = document.querySelector('.results-wrapper');
-
+    
     const results = data.results;
     console.dir(results);
     results.forEach((item, i) => {

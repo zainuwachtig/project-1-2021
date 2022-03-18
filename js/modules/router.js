@@ -1,4 +1,4 @@
-import { getData } from './getData.js'
+import { getData, getExternData } from './getData.js'
 import { Routie } from './vendor/routie.js'
 
 function handleRoutes() {
@@ -9,8 +9,11 @@ function handleRoutes() {
             'leiderschap' : () => {
                 getData('leiderschap')
             },
-            'duurzaam-ondernemen' : () => {
+            'duurzaam%20ondernemen' : () => {
                 getData('duurzaam ondernemen')
+            },
+            'extern%20materiaal' : () => {
+                getExternData('eigen onderneming')
             },
             '' : () => {
                 getData('ondernemen')

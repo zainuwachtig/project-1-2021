@@ -19,10 +19,11 @@
 header {
   display: flex;
   align-items: flex-end;
-  margin: 1em;
+  padding: 1em;
   justify-content: space-around;
-  background-image: url(./img/oba_achtergrond.svg);
-  background-size: cover;
+  align-items: center;
+  /* background-image: url(../img/oba_achtergrond.svg); */
+  /* background-size: cover; */
 }
 
 header h1 span {
