@@ -7,7 +7,7 @@ function render(data) {
         const html = `
             <article>
                 <div>
-                    <img src="${item.coverimages ? item.coverimages[1] : 'Geen samenvatting'}">
+                    <img src="${item.coverimages ? item.coverimages[1] : './img/placeholder.png'}">
                 </div>
                 <div>
                     <h3>${item.titles[0]}</h3>

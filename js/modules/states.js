@@ -1,5 +1,6 @@
 function loadingState() {
-    console.log('ladende')
+    const melding = document.querySelector('#melding')
+    console.log(melding)
 }
 
 function errorState() {
